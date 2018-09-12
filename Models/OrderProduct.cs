@@ -8,7 +8,7 @@ namespace BangazonAPI.Models
   public class OrderProduct
   {
     [Key]
-    public int OrderProductId { get; set; }
+    public int Id { get; set; }
 
     [Required]
     public int OrderId { get; set; }
@@ -16,6 +16,6 @@ namespace BangazonAPI.Models
 
     [Required]
     public int ProductId { get; set; }
-    public Product Product { get; set; }
+    public Products Product { get; set; }
   }
 }
