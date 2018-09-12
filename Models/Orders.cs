@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace BangazonAPI.Models
 {
-  public class Order
+  public class Orders
   {
     [Key]
-    public int OrderId { get; set; }
+    public int sId { get; set; }
 
     [Required]
     [DataType(DataType.Date)]
@@ -16,12 +16,12 @@ namespace BangazonAPI.Models
     public DateTime DateCreated { get; set; }
 
     [Required]
-    public int CustomerId { get; set; }
-    public Customer Customer { get; set; }
-    public int? PaymentTypeId { get; set;} // ? means that the variable can be null
-    public PaymentType PaymentType { get; set; }
+    public int CustomersId { get; set; }
+    public Customers Customers { get; set; }
+    public int? PaymentTypesId { get; set;} // ? means that the variable can be null
+    public PaymentTypes PaymentTypes { get; set; }
 
-    public IEnumerable<OrderProduct> OrderProducts;
+    public IEnumerable<OrderProduct> ProductOrders;
 
   }
 }
